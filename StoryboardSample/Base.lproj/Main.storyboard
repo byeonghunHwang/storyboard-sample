@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+            <point key="canvasLocation" x="854" y="123"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="eVK-4E-v4A">
@@ -50,13 +50,71 @@
                     <view key="view" contentMode="scaleToFill" id="8xB-NX-QGa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cp-g2-A6O">
+                                <rect key="frame" x="102" y="366" width="170" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Next Scene"/>
+                                <connections>
+                                    <action selector="nextScene:" destination="EGI-yP-cAT" eventType="touchUpInside" id="ewC-SW-ZW6"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kph-4A-y1e">
+                                <rect key="frame" x="163" y="236" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.8950855472961734" blue="0.82127164127698327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="First View Controller" id="dXD-QR-32f"/>
+                    <connections>
+                        <outlet property="mySwitch" destination="kph-4A-y1e" id="aDz-Qz-Yf5"/>
+                        <segue destination="T9I-j7-asP" kind="show" identifier="second" id="t2O-RO-4xQ"/>
+                        <segue destination="TE1-uj-KGm" kind="show" identifier="third" id="vAh-FS-Bj6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLU-aH-l4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="123"/>
+            <point key="canvasLocation" x="1620" y="122.78860569715144"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="vr1-8W-EgU">
+            <objects>
+                <viewController id="TE1-uj-KGm" customClass="ThirdViewController" customModule="StoryboardSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tVQ-mj-oa6"/>
+                        <viewControllerLayoutGuide type="bottom" id="OzZ-HS-YzS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5uH-g8-YAn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.91602602488323059" blue="0.99222706834779395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Third View Controller" id="nF6-0t-h2P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKX-R4-HpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2417" y="489"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="sKl-6m-Cfb">
+            <objects>
+                <viewController id="T9I-j7-asP" customClass="SecondViewController" customModule="StoryboardSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2c0-xC-sJV"/>
+                        <viewControllerLayoutGuide type="bottom" id="LcU-YT-KAN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sb2-rb-VTG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.83003866719577046" green="0.99650267249711921" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Second View Controller" id="SjL-39-b6W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Qi-Wk-2WI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2418" y="-288"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iWb-JS-DOZ">
